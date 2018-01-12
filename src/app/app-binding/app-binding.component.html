@@ -1,0 +1,28 @@
+
+<h1>{{title}}</h1>
+
+  
+  <label for="name">Name::</label>
+  <input type="text" id="name"[(ngModel)]="name">
+
+
+ 
+  <label for="lastname">LastName::</label>
+  <input type="text" id="lastname"[(ngModel)]="lastname">
+
+
+  <p>Hi {{name}}   {{lastname}}</p>
+
+  <label for="title">Title::</label>
+  <input type="text" 
+  id="title"
+  [ngClass] = "{'test':isVisible}"
+   value="{{title}}" #titleInput >
+   <br/>
+   <br/>
+<p>{{title}}</p>
+  <button type="submit" (click)="toggleTitle($event,titleInput)">Toggle Title</button>
+
+
+
+  
